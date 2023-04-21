@@ -4,19 +4,14 @@ namespace App\Helpers;
 use GuzzleHttp\Client;
 
 Class NequiAuthService{
-
     private $clientId;
     private $clientSecret;
     private $authUri;
-    // private $apiKey;
-    // private $paymentUri;
 
     public function __construct(){
         $this->clientId = env('NEQUI_CLIENT_ID');
         $this->clientSecret = env('NEQUI_CLIENT_SECRET');
         $this->authUri = env('NEQUI_AUTH_URI');
-        // $this->paymentUri = env('NEQUI_PAYMENT_URI');
-        // $this->apiKey = env('NEQUI_API_KEY');
     }
 
     public function tokenGen(){
